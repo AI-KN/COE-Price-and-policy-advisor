@@ -27,7 +27,4 @@ Detailed explanation of COE Bidding and calculation - https://blog.seedly.sg/coe
 
 Data for COE History - https://data.gov.sg/datasets/d_69b3380ad7e51aff3a7dcc84eba52b8a/view
 '''
-with st.expander("How to use this App"):
-    st.write("1. Enter your prompt in the text area.")
-    st.write("2. Click the 'Submit' button.")
-    st.write("3. The app will generate a text completion based on your prompt.")
+
