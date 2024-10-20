@@ -2,29 +2,28 @@
 import streamlit as st
 import pandas as pd
 # from helper_functions import llm
-# from helper_functions.utility import check_password
+from helper_functions.utility import check_password
 from helper_functions.rag import rag_ans
 
 
 # region <--------- Streamlit App Configuration --------->
 st.set_page_config(
     layout="centered",
-    page_title="My COE Advisor"
+    page_title="My COE Advisor 🚗"
 )
 # endregion <--------- Streamlit App Configuration --------->
 
-st.title("COE Advisor")
+st.title("🤖 Your personal COE Advisor")
+st.image("logo.jpg", caption="COE Advisor")
 
-'''
 # Check if the password is correct.  
 if not check_password():  
     st.stop()
-'''
 
 form = st.form(key="form")
-form.subheader("Hello! I'm your dedicated COE advisor! :)")
+form.subheader("Hello! I'm your dedicated COE advisor!")
 
-user_prompt = form.text_area("Ask your COE related question here!", height=200)
+user_prompt = form.text_area("Ask your COE related questions here! I am capable of conversing, so feel free to ask continuous questions.", height=200)
 
 if form.form_submit_button("Submit"):
     

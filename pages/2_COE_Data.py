@@ -31,9 +31,9 @@ data = load_data(10000)
 #    st.subheader('Raw data')
 #    st.write(data)
 
-st.subheader('COE Premiums by year')
+st.subheader('COE Premiums by year 📈')
 """Please select a Category using the slide below to view the COE premiums for each period"""
-Category_filter = st.select_slider('Category', options=["Category A","Category B","Category C","Category D","Category E"])
+Category_filter = st.select_slider('Category', options=["Category A 🚗","Category B 🚙","Category C 🚚","Category D 🏍️","Category E 🏎️"])
 filtered_data = data[data['vehicle_class'] == Category_filter]
 #hist_values = np.histogram(
 #    data['month'].dt.year, bins=14, range=(2010,2024))[0]
@@ -42,7 +42,7 @@ st.line_chart(filtered_data,x='month',y='premium')
 
 st.divider()
 
-st.subheader('Filter the data by period and/or Vehicle Category')
+st.subheader('Filter the data by period and/or Vehicle Category 📊')
 "Please select the Period and Category below to load the corresponding data table. You may select multiple periods and vehicle categories."
 dynamic_filters = DynamicFilters(df=data, filters=['month', 'vehicle_class'])
 dynamic_filters.display_filters()
