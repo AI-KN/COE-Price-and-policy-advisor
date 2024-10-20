@@ -8,7 +8,7 @@ sys.path.append(os.path.dirname(SCRIPT_DIR))
 from data.coe_history import Data_URL
 from streamlit_dynamic_filters import DynamicFilters
  
-st.header('Historical COE Data')
+st.header('🔎 COE Data Explorer')
 """This app allows you to visualise historical COE data (From 2010 to current) for better informed decision making. Please feel free to explore the interactive chart and tables!"""
 
 @st.cache_data
@@ -33,7 +33,7 @@ data = load_data(10000)
 
 st.subheader('COE Premiums by year 📈')
 """Please select a Category using the slide below to view the COE premiums for each period"""
-Category_filter = st.select_slider('Category', options=["Category A 🚗","Category B 🚙","Category C 🚚","Category D 🏍️","Category E 🏎️"])
+Category_filter = st.select_slider('Category', options=["Category A","Category B","Category C","Category D","Category E"])
 filtered_data = data[data['vehicle_class'] == Category_filter]
 #hist_values = np.histogram(
 #    data['month'].dt.year, bins=14, range=(2010,2024))[0]
